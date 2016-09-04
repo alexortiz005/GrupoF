@@ -25,23 +25,15 @@
                 <b:commandButton value="Sign In" look="sucsess" icon="log-in" iconAlign="right" styleClass="form-commandButton"/>
             </h:form>
         </b:navBar>
-        <b:jumbotron>
-            <b:container>
-                <h1>Bienvenido a su terminal de Transporte</h1>
-            </b:container>
-        </b:jumbotron>
         <b:container>
             <h:form>
                 <b:row>
-                    <b:column col-md="4" offset="8">
-                        <b:panel title="Tiquetes" look="success">
-                            <b:icon name="glyphicon glyphicon-road" size="2x"/>
-                            <h2>Tiquete</h2>
-                            <p>Calcularemos su tiquete dependiendo del origen y el destino</p>
+                    <b:column col-md="6" offset="3">
+                        <b:panel>
                             <h:form styleClass="form-panel">
-                                <b:inputText id="origen" placeholder="Origen" value="" required="true" requiredMessage="El origen es requerido"></b:inputText>
-                                <b:inputText id="destino" placeholder="Destino" value="" required="true" requiredMessage="El destino es requerido"></b:inputText>
-                                <b:commandButton  value="Calcular" look="info" icon="search" iconAlign="left"/>
+                                <b:inputText id="usuario" placeholder="Usuario" value="" required="true" requiredMessage="El nombre de usuario es requerido"></b:inputText>
+                                <b:inputText id="password" placeholder="Contraseña" value="" required="true" requiredMessage="La contraseña es requerida"></b:inputText>
+                                <b:commandButton  value="Ingresar" look="info" icon="search" iconAlign="center"/>
                             </h:form>
                         </b:panel>
                     </b:column>
