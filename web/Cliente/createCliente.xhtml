@@ -37,7 +37,7 @@
         <b:container>
             <h:form>
                 <b:jumbotron styleClass="form-jumbotron">
-                    <h1>Logueate!!</h1>
+                    <h1>Crea tu Cuenta</h1>
                 </b:jumbotron>    
             </h:form>
         </b:container>
@@ -47,9 +47,14 @@
                     <b:column col-md="6" offset="3">
                         <b:panel>
                             <h:form styleClass="form-panel">
-                                <b:inputText id="usuario" placeholder="Usuario" value="" required="true" requiredMessage="El nombre de usuario es requerido"></b:inputText>
-                                <b:inputText id="password" placeholder="Contraseña" value="" required="true" requiredMessage="La contraseña es requerida"></b:inputText>
-                                <b:commandButton  value="Ingresar" look="info" icon="search" iconAlign="center"/>
+                                <b:inputText id="nombre" placeholder="Nombre" value="" required="true" requiredMessage="El nombre de usuario es requerido"></b:inputText>
+                                <b:inputText id="apellido" placeholder="Apellido" value="" required="true" requiredMessage="La contraseña es requerida"></b:inputText>
+                                <b:inputText id="cedula" placeholder="Cédula" value="" required="true" requiredMessage="El nombre de usuario es requerido"></b:inputText>
+                                <b:inputText id="email" placeholder="E-Mail" value="" required="true" requiredMessage="La contraseña es requerida"></b:inputText>
+                                <b:inputText id="telefono" placeholder="Teléfono" value="" required="true" requiredMessage="El nombre de usuario es requerido"></b:inputText>
+                                <b:inputSecret id="password" placeholder="Contraseña" value="" required="true" requiredMessage="La contraseña es requerida"></b:inputSecret>
+                                <b:commandButton  value="Registrar" look="info" icon="plus" iconAlign="center"/>
+                                
                             </h:form>
                         </b:panel>
                     </b:column>
