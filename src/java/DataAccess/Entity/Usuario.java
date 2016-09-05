@@ -23,12 +23,13 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Usuario
+ * @author andrew
  */
 @Entity
 @Table(name = "usuario")
 @XmlRootElement
 @NamedQueries({
+    @NamedQuery(name = "Usuario.control", query = "SELECT u FROM Usuario u WHERE u.email = :email and u.contrase\u00f1a = :contrase\u00f1a"),
     @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u"),
     @NamedQuery(name = "Usuario.findByIdUSUARIO", query = "SELECT u FROM Usuario u WHERE u.idUSUARIO = :idUSUARIO"),
     @NamedQuery(name = "Usuario.findByNombre", query = "SELECT u FROM Usuario u WHERE u.nombre = :nombre"),
