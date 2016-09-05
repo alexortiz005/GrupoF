@@ -41,9 +41,7 @@
                             <h:form styleClass="form-panel">
                                 <b:inputText id="origen" placeholder="Origen" value="#{tiqueteBean.origen}" required="true" requiredMessage="El origen es requerido"></b:inputText>
                                 <b:inputText id="destino" placeholder="Destino" value="#{tiqueteBean.destino}" required="true" requiredMessage="El destino es requerido"></b:inputText>
-                                <b:commandButton action="#{tiqueteBean.checkout()}" value="Calcular" look="info" icon="search" iconAlign="left"/>
-                                <h:outputText value="#{tiqueteBean.precio}"/>
-                            
+                                <b:commandButton action="Tiquete/consultarTiquete" value="Calcular" look="info" icon="search" iconAlign="left"/>                          
                             </h:form>
                         </b:panel>
                     </b:column>
