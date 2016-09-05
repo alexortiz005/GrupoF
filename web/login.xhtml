@@ -2,14 +2,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:b="http://bootsfaces.net/ui">
     <h:head>
         <title>Terminal</title>
         <meta name="author" content="The Author"></meta>
         <style type="text/css">
             .form-commandButton{
+                padding: 2px;
+                margin-right: 10px;
+                text-align: center;
+            }
+            .form-panel {
+                margin: 0 auto;
+                max-width: 330px;
+                padding: 15px;
+            }
+            .form-jumbotron {
                 padding: 20px;
-                margin-right: 15px;
                 text-align: center;
             }
 
@@ -21,27 +31,29 @@
 
             </b:navbarLinks>
             <h:form styleClass="navbar-form navbar-right">
-                <b:button outcome="/login" value="Log In" look="success" icon="log-in" iconAlign="right" styleClass="form-commandButton"/>
+                
                 <b:button outcome="Cliente/createCliente" value="Sign In" look="success" icon="log-in" iconAlign="left" styleClass="form-commandButton"/>
             </h:form>
         </b:navBar>
-        <b:jumbotron>
-            <b:container>
-                <h1>Bienvenido a su terminal de Transporte</h1>
-            </b:container>
-        </b:jumbotron>
         <b:container>
             <h:form>
+                <b:jumbotron styleClass="form-jumbotron">
+                    <h1>Log in</h1>
+                </b:jumbotron>    
+            </h:form>
+        </b:container>
+        <b:container>
+            
+            <p:growl id="growl" sticky="true" showDetail="true" />
+            <h:form id="loginForm">
                 <b:row>
-                    <b:column col-md="4" offset="8">
-                        <b:panel title="Tiquetes" look="success">
-                            <b:icon name="glyphicon glyphicon-road" size="2x"/>
-                            <h2>Tiquete</h2>
-                            <p>Calcularemos su tiquete dependiendo del origen y el destino</p>
+                    <b:column col-md="6" offset="3">
+                        <b:panel>
                             <h:form styleClass="form-panel">
-                                <b:inputText id="origen" placeholder="Origen" value="" required="true" requiredMessage="El origen es requerido"></b:inputText>
-                                <b:inputText id="destino" placeholder="Destino" value="" required="true" requiredMessage="El destino es requerido"></b:inputText>
-                                <b:commandButton  value="Calcular" look="info" icon="search" iconAlign="left"/>
+                                <b:inputText id="username" placeholder="Email" value="#{loginBean.username}" required="true" requiredMessage="El nombre de usuario es requerido"></b:inputText>
+                                <b:inputSecret id="password" placeholder="Contraseña" value="#{loginBean.password}" required="true" requiredMessage="La contraseña es requerida"></b:inputSecret>
+                                <b:commandButton  action="#{loginBean.login}" value="Ingresar" update="loginForm" look="info" icon="search" iconAlign="center"/>
+        
                             </h:form>
                         </b:panel>
                     </b:column>
