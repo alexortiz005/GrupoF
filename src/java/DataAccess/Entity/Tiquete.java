@@ -136,4 +136,9 @@ public class Tiquete implements Serializable {
         return "DataAccess.Entity.Tiquete[ idTIQUETE=" + idTIQUETE + " ]";
     }
     
+    
+    public static double calcularPrecio(String origen,String destino){
+        return Math.random();
+    }
+    
 }
